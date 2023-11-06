@@ -15,15 +15,15 @@ export default function MoviesDisplay({ movies, getMovieInfo }) {
         ))
       ) : (
         <section className={styles.movieError}>
-          <h1>
+          <h1 className={styles.errorMessage}>
             Oh, snap! It looks like this API is playing hide and seek with that
             movie, but it's a master of disguise and we couldn't find it.
           </h1>
 
           <ul>
-            <li>
-              <i>Check spelling and spacing</i>
-            </li>
+            <i>Check spelling and spacing</i>
+            <br />
+            <span>Some movies are not in this Api</span>
           </ul>
           <img
             src="https://media.giphy.com/media/dqC7qh15XHPsy4Ffdr/giphy.gif"

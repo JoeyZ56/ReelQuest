@@ -16,10 +16,17 @@ export default function App() {
   //State to hold movie data
   const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    getMovies("How to Train Your Dragon").then((data) => {
+  const handleSearch = async (searchTerm) => {
+    try {
+      const data = await getMovies(searchTerm);
       setMovies(data);
-    });
+    } catch (error) {
+      console.log(error, "searchterm failed");
+    }
+  };
+
+  useEffect(() => {
+    handleSearch("How to Train Your Dragon");
   }, []);
 
   const toggleTheme = () => {
@@ -30,7 +37,7 @@ export default function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={styles.App} id={theme}>
         {/* passing a prop (rendering) */}
-        <Form moviesearch={getMovies} />
+        <Form handleSearch={handleSearch} />
         <MoviesDisplay movies={movies} getMovieInfo={getMovieInfo} />
         <Footer toggleTheme={toggleTheme} />
       </div>

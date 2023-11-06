@@ -1,54 +1,63 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  
-
 }
 
 .movieCard {
-    perspective: 1000px;
-    width: 300px; 
-    height: 450px; 
-    position: relative;
+  perspective: 1000px;
+  width: 300px;
+  height: 450px;
+  position: relative;
 
-    margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
 
-    
-    
-  }
-  
-  .movieFront,
-  .movieBack {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
- 
-    border-radius: 5px; /* Add border radius as needed */
-
-    
   }
-  
-  .movieBack {
-    background-color: whitesmoke;
-h2 {
+}
+
+.movieFront,
+.movieBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px; /* Add border radius as needed */
+}
+
+.movieBack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Vertically spaced */
+  align-items: center; /* Start from the left edge */
+  height: 100%; /* Ensure the container takes full height */
+
+  background-color: #fff;
+
+  h2,
+  h3 {
     font-size: 1.5rem;
     font-weight: 700;
-}
-h3 {
-    font-weight: 600;
-}
-
-    
-}
-
-  .hidden {
-    display: none;
   }
-  
+  p {
+    font-weight: 600;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.cardBackInfo {
+  margin: 10px;
+}
+
+.infoSpacing {
+  margin-top: -8px;
+}

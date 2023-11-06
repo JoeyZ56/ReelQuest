@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   img {
     color: whitesmoke;
   }
@@ -26,12 +27,6 @@
 }
 
 //Theme
-.toggleContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1rem;
-}
 
 .app__toggle-label {
   --width: 40px;

@@ -7,7 +7,7 @@ export default function MovieDisplay({ movie, getMovieInfo }) {
   const [toggle, setToggle] = useState(false);
 
   const handleClick = (id) => {
-    getMovieInfo(id);
+    getMovieInfo(id, setSelectedMovie);
     setToggle(!toggle);
   };
 
@@ -32,21 +32,24 @@ export default function MovieDisplay({ movie, getMovieInfo }) {
         <motion.div
           className={`${styles.movieBack} ${toggle ? "" : styles.hidden}`}
         >
-          <h2 className={styles.Movie}>{movie.Title}</h2>
-          <br />
-          <h3>Released: {movie.Year}</h3> <br />
+          <h2 className={`${styles.Movie} ${styles.cardBackInfo}`}>
+            <i>{movie.Title}</i>
+          </h2>
+
           {selectedMovie && (
             <>
               <h3>Director:</h3>
-              <h4>{selectedMovie.Director}</h4>
-              <br />
+              <p className={styles.infoSpacing}>{selectedMovie.Director}</p>
+
               <h3>Genre:</h3>
-              <h4> {selectedMovie.Genre}</h4>
-              <br />
+              <p className={styles.infoSpacing}> {selectedMovie.Genre}</p>
+
               <h3>Plot:</h3>
-              <p className={styles.Plot}>{selectedMovie.Plot}</p>
-              <br />
-              <h3>Rated: {selectedMovie.Rated}</h3>
+              <p className={`${styles.infoSpacing} ${styles.cardBackInfo}`}>
+                {selectedMovie.Plot}
+              </p>
+              <h4>Released: {movie.Year}</h4>
+              <h4>Rated: {selectedMovie.Rated}</h4>
             </>
           )}
         </motion.div>

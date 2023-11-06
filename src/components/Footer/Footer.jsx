@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 import styles from "./Footer.module.scss";
 
 const Footer = ({ toggleTheme }) => {
@@ -28,18 +30,25 @@ const Footer = ({ toggleTheme }) => {
         </label>
       </div>
       <section className={styles.footerLinks}>
-        <a href="https://portfolio.joeyzazzi.com/" target="_blank">
+        {/* <a href="https://portfolio.joeyzazzi.com/" target="_blank">
           Portfolio
-        </a>
-        <a href="https://github.com/JoeyZ56/React-Movie-API" target="_blank">
-          Github
-        </a>
-        <a
+        </a> */}
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: "tween" }}
+          href="https://github.com/JoeyZ56/React-Movie-API"
+          target="_blank"
+        >
+          <FaGithub />
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: "tween" }}
           href="https://www.linkedin.com/in/joseph-zazzi-8bab68a1/"
           target="_blank"
         >
-          Linkedin
-        </a>
+          <FaLinkedin />
+        </motion.a>
       </section>
     </>
   );

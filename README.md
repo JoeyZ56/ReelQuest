@@ -1,8 +1,25 @@
-# React + Vite
+<div style="flex-center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Technologies
 
-Currently, two official plugins are available:
+### Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Omdbapi
+
+### Framer-Motion
+
+### Sass
+
+<br/>
+
+# User Stories
+
+### Users can search movies and find basic information on each film.
+
+<br/>
+
+#### This is a remake of an app I made awhile ago called Movie Search, using new technologies and better practices.
+
+https://github.com/JoeyZ56/React-Movie-API
+
+</div>

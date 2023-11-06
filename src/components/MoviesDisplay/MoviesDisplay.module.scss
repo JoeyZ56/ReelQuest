@@ -1,36 +1,38 @@
 .movieError {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 
-height: 100vh;
-width: 100vw;
-font-size: 2rem;
-color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2rem;
+  color: whitesmoke;
 
-    
-    a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: whitesmoke;
-        cursor: pointer;
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: whitesmoke;
+    cursor: pointer;
 
-        &:hover {
-            color: #ccc;
-            transition: color 0.2s;
-        }
+    &:hover {
+      color: #ccc;
+      transition: color 0.2s;
     }
+  }
 
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    li {
-        color: #d8d104;
-    }
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    color: #d8d104;
+  }
+}
+.errorMessage {
+  margin: 3rem;
 }
